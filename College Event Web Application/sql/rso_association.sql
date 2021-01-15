@@ -1,0 +1,7 @@
+USE register;
+DROP TABLE IF EXISTS rso_Association;
+
+CREATE TABLE rso_Association(
+	RSO_Assocation_id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    RSO_id INTEGER NOT NULL);
