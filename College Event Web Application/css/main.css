@@ -1,0 +1,165 @@
+body
+{
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	background-color: #0f2862;
+}
+.logo_avatar
+{
+	margin-left:0px;
+	margin-bottom: 0px;
+	width: 35px;
+	height: 50px;
+}
+
+.creation_link
+{
+	margin-top: 0px;
+	margin-left: 25px;
+	/*border-radius: 10px;*/
+	/*border-right: 1px solid purple;*/
+	width: 85px;
+	height: 50px;
+	background-color: transparent;
+	color: #091f36;	
+	border: none;
+}
+
+.creation_link:hover
+{
+	background-color: #091f36;
+	color: white;
+	cursor: pointer;
+}
+
+.event_link
+{
+	margin-top: 0px;
+	margin-left: 0px;
+	/*border-radius: 10px;
+	border: 1px solid purple;*/
+	width: 85px;
+	height: 50px;
+	background-color: transparent;
+	color: #091f36;
+	border: none;
+}
+
+.event_link:hover
+{
+	background-color: #091f36;
+	color: white;
+	cursor: pointer;
+}
+
+/*.login_form
+{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid black;
+	width: 300px;
+}*/
+
+.nav_bar
+{
+	/*border: 1px solid black;*/
+	height: 50px;
+	background-color: #9e363a;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+/*
+form
+{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	width: 300px;
+	height: 250px;
+	background-color: white;
+	border: 1px solid black;
+}*/
+/*
+input
+{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.form_text
+{
+	margin-top: 75px;
+}
+
+.username_text
+{
+	color:#091f36;
+	margin-left: 75px;
+}
+
+.pass_text
+{
+	color: #091f36;
+	margin-left: 75px;
+}
+
+.reg_btn
+{
+	margin-left: 25px;
+	border-radius: 10px;
+	border: 1px solid #091f36;
+	width: 85px;
+	height: 30px;
+	background-color: transparent;
+	color: #091f36;
+}
+
+.reg_btn:hover
+{
+	background-color: #091f36;
+	color: white;
+	cursor: pointer;
+}
+
+.sign_in_btn
+{
+	margin-left: 55px;
+	border-radius: 10px;
+	border-width: 3px;
+	border: 1px solid #091f36;
+	width: 85px;
+	height: 30px;
+	background-color: #091f36;
+	color: white;
+}
+
+.sign_in_btn:hover
+{
+	cursor: pointer;
+}
+*/
+.avatar_div
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	background-color: blue;
+	width: 300px;
+
+}
+
+.avatar_div .login_avatar
+{
+	height: 50px;
+	width: 50px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+	background-color: blue;
+}
