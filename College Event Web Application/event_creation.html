@@ -1,0 +1,184 @@
+<!-- creation event page-->
+<!-- this will require the ability to add name, event category, description, time, date, location, contact, phone, and contact email address-->
+<!-- add functionality to set the location from a map (Bing, Google, open street map) with name, latitude, longitude-->
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="js/dashboard.js"></script>
+<script src="js/index.js"></script>
+</head>
+<body style="background-color:#0f2862;">
+	<div id='navbar'></div>
+	<!--Admin can create events with name, event category, description, time, date, location, contact phone, and contact email address.-->
+<div class="event_creation" style="border: 1px solid black; margin-left:15px; margin-right:15px;margin-top:10px;background-color:white;">
+	<div class="event" style="margin-left:10px;margin-top:10px;margin-bottom:10px;width:18rem;">
+		<form method="POST" class="event_creation_form">
+			<h2 class="event_title"> <i class="fa fa-globe" aria-hidden="true"></i> Event Creation</h2>
+			<div class="underline" style="border:1px solid black;width:13rem !important; margin-left:35px !important;"></div>
+		</form>
+	</div>
+	<div class="form-group" style="margin-left:10px;margin-right:10px;">
+		<input type="text" class="form-control" id="eventName" aria-describedby="text" placeholder="Event Name">
+	</div>
+	<div id=eventName_Result></div>
+	<div class="form-group" style="margin-left:10px; margin-right:10px;">
+		<select class="custom-select mr-sm-2" id="eventCategory">
+			<option selected>Event Category</option>
+			<option value="Social">Social</option>
+			<option value="Fundraising">Fundraising</option>
+			<option value="Tech Talks">Tech Talks</option>
+		</select>
+	</div>
+	<div id=eventCategory_Result></div>
+	<label style="margin-left:10px;">Date of Event</label>
+	<div class="form-group">
+		<div class="row">
+			<div class="col" style="margin-left:10px;">
+			<select class="custom-select mr-sm-2" id="date">
+				<option selected>Day</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+				<option value="25">25</option>
+				<option value="26">26</option>
+				<option value="27">27</option>
+				<option value="28">28</option>
+				<option value="29">29</option>
+				<option value="30">30</option>
+				<option value="31">31</option>
+			</select>
+			</div>
+			<div class="col">
+			<select class="custom-select mr-sm-2" id="Month">
+				<option selected>Month</option>
+				<option value="January">January</option>
+				<option value="Febuary">Febuary</option>
+				<option value="March">March</option>
+				<option value="April">April</option>
+				<option value="May">May</option>
+				<option value="June">June</option>
+				<option value="July">July</option>
+				<option value="August">August</option>
+				<option value="September">September</option>
+				<option value="October">October</option>
+				<option value="November">November</option>
+				<option value="December">December</option>
+			</select>
+			</div>
+			<div class="col" style="margin-right:10px;">
+			<input type="text" class="form-control" id="Year" aria-describedby="text" placeholder="Year">
+			</div>
+		</div>
+	</div>
+	<div id=eventDate_Result></div>
+	<label style="margin-left:10px;">Time of Event</label>
+	<div class="form-group">
+		<div class="row">
+			<div class="col" style="margin-left:10px;">
+				<select class="custom-select mr-sm-2" id="start_time">
+					<option selected>Start Time</option>
+					<option value="7:00 AM">7:00 AM</option>
+					<option value="8:00 AM">8:00 AM</option>
+					<option value="9:00 AM">9:00 AM</option>
+					<option value="10:00 AM">10:00 AM</option>
+					<option value="11:00 AM">11:00 AM</option>
+					<option value="12:00 PM">12:00 PM</option>
+					<option value="1:00 PM">1:00 PM</option>
+					<option value="2:00 PM">2:00 PM</option>
+					<option value="3:00 PM">3:00 PM</option>
+					<option value="4:00 PM">4:00 PM</option>
+					<option value="5:00 PM">5:00 PM</option>
+					<option value="6:00 PM">6:00 PM</option>
+					<option value="7:00 PM">7:00 PM</option>
+					<option value="8:00 PM">8:00 PM</option>
+					<option value="9:00 PM">9:00 PM</option>
+					<option value="10:00 PM">10:00 PM</option>
+					<option value="11:00 PM">11:00 PM</option>
+					<option value="12:00 AM">12:00 AM</option>
+					<option value="1:00 AM">1:00 AM</option>
+					<option value="2:00 AM">2:00 AM</option>
+					<option value="3:00 AM">3:00 AM</option>
+					<option value="4:00 AM">4:00 AM</option>
+					<option value="5:00 AM">5:00 AM</option>
+					<option value="6:00 AM">6:00 AM</option>
+				</select>
+			</div>
+			<div class="col" style="margin-right:10px;">
+				<select class="custom-select mr-sm-2" id="end_time">
+					<option selected>End Time</option>
+					<option value="7:00 AM">7:00 AM</option>
+					<option value="8:00 AM">8:00 AM</option>
+					<option value="9:00 AM">9:00 AM</option>
+					<option value="10:00 AM">10:00 AM</option>
+					<option value="11:00 AM">11:00 AM</option>
+					<option value="12:00 PM">12:00 PM</option>
+					<option value="1:00 PM">1:00 PM</option>
+					<option value="2:00 PM">2:00 PM</option>
+					<option value="3:00 PM">3:00 PM</option>
+					<option value="4:00 PM">4:00 PM</option>
+					<option value="5:00 PM">5:00 PM</option>
+					<option value="6:00 PM">6:00 PM</option>
+					<option value="7:00 PM">7:00 PM</option>
+					<option value="8:00 PM">8:00 PM</option>
+					<option value="9:00 PM">9:00 PM</option>
+					<option value="10:00 PM">10:00 PM</option>
+					<option value="11:00 PM">11:00 PM</option>
+					<option value="12:00 AM">12:00 AM</option>
+					<option value="1:00 AM">1:00 AM</option>
+					<option value="2:00 AM">2:00 AM</option>
+					<option value="3:00 AM">3:00 AM</option>
+					<option value="4:00 AM">4:00 AM</option>
+					<option value="5:00 AM">5:00 AM</option>
+					<option value="6:00 AM">6:00 AM</option>
+				</select>
+		</div>
+	</div>
+	<div id=eventTime_Result></div>
+	<label style="margin-left:10px;">Contact Information</label>
+	<div class="form-group">
+		<div class="row">
+			<div style="margin-left:10px;" class="col">
+				<input type="tel" class="form-control" id="PhoneNumber" aria-describedby="text" placeholder="Contact Phone Number">
+			</div>
+			<div style="margin-right:10px;" class="col">
+				<input type="text" class="form-control" id="Email" aria-describedby="text" placeholder="Contact Email">
+			</div>
+		</div>
+	</div>
+	<div id=eventContact_Result></div>
+	<div class="form-group" style="margin-right:10px;margin-left:10px;">
+		<button type="button" class="btn btn-outline-success btn-block" onclick="doEventCreation()">Create</button>
+	</div>
+</div>
+</form>
+</div>
+</div>
+</body>
+<footer style="color:white;">Made by Drew King</footer>
+</html>

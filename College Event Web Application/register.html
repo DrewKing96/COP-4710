@@ -1,0 +1,68 @@
+<html>
+<header><title>College Events</title></header>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/index.js"></script>
+	<style>
+	.form-control:focus{border-color: #5cb85c;  box-shadow: none; -webkit-box-shadow: none;} 
+	.has-error .form-control:focus{box-shadow: none; -webkit-box-shadow: none;}
+	</style>
+</head>
+<body style="background-color: #ebebeb;">
+<div id='navbar'></div>
+<br>
+<br>
+<br>
+<br>
+<div class="register_creating" style="background-color: white;border:10px solid #ebebeb;margin-left:10px;margin-right:10px;">
+	<div class='login'>
+		<form method="POST" class='login_form'>
+			<h2 class = "Login" style="margin-left:50px;border-top:20px solid white;">Registration</h2>
+			<!--<div class="underline" style="border: 1px solid black;margin-left:10px;margin-right:10px;"></div>-->
+		</form>
+	</div>
+	<div class="form-group" style="margin-right:10px;margin-left:10px;">
+		<input type="text" class="form-control" id="fName" aria-describedby="text" placeholder="First Name">
+	</div>
+	<div class="form-group" style="margin-right:10px;margin-left:10px;">
+		<input type="text" class="form-control" id="lName" aria-describedby="text" placeholder="Last Name">
+	</div>
+	<div class="form-group" style="margin-right:10px;margin-left:10px;">
+		<input type="text" class="form-control" id="email" aria-describedby="text" placeholder="Email">
+	</div>
+	<div class="form-group" id = "email_result" style="margin-right:10px;margin-left:10px;"></div>
+	<div class="form-group" id = "userTypedrpdwn" style="margin-right:10px;margin-left:10px;">
+		<select class="custom-select mr-sm-2" id="userType">
+			<option selected>User Type</option>
+			<option value="1">Student</option>
+			<option value="2">Administrator</option>
+			<option value="3">University Administrator</option>
+		</select>
+	</div>
+	<div class="form-group" style="margin-right:10px;margin-left:10px;">
+		<input type="text" class="form-control" id="userSchool" aria-describedby="text" placeholder="University/College">
+	</div>
+	<div class="form-group" style="margin-right:10px;margin-left:10px;">
+		<input type="text" class="form-control" id="userName" aria-describedby="text" placeholder="Username">
+	</div>
+	<div class="form-group" id = "username_result" style="margin-right:10px;margin-left:10px;"></div>
+	<div class="form-group" style="margin-right:10px;margin-left:10px;">
+		<input type="password" class="form-control" id="userPWD" aria-describedby="text" placeholder="Password">
+	</div>
+	<div class="form-group" id = "register_result" style="margin-right:10px;margin-left:10px;"></div>
+	<div class="form-group" style="margin-right:10px;margin-left:10px;">
+		<button type="button" class="btn btn-outline-success btn-block" onclick="doRegister()">Register</button>
+	</div>
+	<div class="form-group" style="margin-right:10px;margin-left:10px;">
+		<button type="button" class="btn btn-outline-success btn-block" onclick="window.location.href = 'index.html';">Login</button>
+	</div>
+</div>
+
+</body>
+<footer style="color:white;">Made by Drew King</footer>
+</html>

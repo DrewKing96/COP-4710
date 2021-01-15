@@ -1,0 +1,13 @@
+Implement google maps for location identification
+add functionality for different types of users and there identifications
+add session keys to have the ability to logout and verification as pages are passed
+add calendar functionality
+add the ablility to grab all events associated with a users account
+add review functionality for users
+how to store an array in sql database
+add triggers for when an rso has 5 or more members (making it active and inactive)
+add functionality to join and unjoin RSO's
+add functionality to create RSO's
+Complete the build of my sql database
+add ability to add pictures for university profiles
+

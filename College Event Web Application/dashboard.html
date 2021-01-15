@@ -1,0 +1,82 @@
+<!--User Dashboard that gives abiltiy to create or join different RSOs, ability to view created RSOs and ones that they have joined-->
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="background-color:#0f2862;overflow-x:hidden;">
+	<div id='navbar'></div>
+<container>
+	<div id="welcomeMess"></div>
+	<div class="row">
+		<div class="col">
+			<h2 class="upcoming_events_title" style="color:white;border-left:10px solid #0f2862">Upcoming Events</h2>
+			<div class="underline" style="border:1px solid black;margin-bottom:15px;"></div>
+			<div style="overflow-y:auto;height:95vh;">
+				<div id='card-container'></div>
+			</div>
+		</div>
+		<div class="col">
+				<div class="dashboard_event_search">
+					<div class="search">
+						<form method="POST" class="event_search_form">
+							<h2 class="search_title" style="color:white;">Search</h2>
+							<div class="underline" style="border:1px solid black;"></div>
+						</form>
+					</div>
+					<div class="form-group" style="margin-left:10px;margin-right:10px;">
+						<select class="custom-select mr-sm-2" id="university_search">
+							<option selected>University</option>
+						</select>
+					</div>
+					<div class="form-group" style="margin-left:10px;margin-right:10px;">
+						<select class="custom-select mr-sm-2" id="university_search">
+							<option selected>Location</option>
+						</select>
+					</div>
+					<div class="form-group" style="margin-right:10px;margin-left:10px;">
+						<button type="button" class="btn btn-outline-success btn-block">Search</button>
+					</div>
+				</div>
+				<div class="dashboard_current_rso">
+					<div class="rso">
+						<form method="POST" class="rso_info">
+							<h2 class="search_title" style="color:white;">Current RSO(s)</h2>
+							<div class="underline" style="border:1px solid black;"></div>
+						</form>
+					</div>
+					<div class="form-group" style="margin-left:10px;margin-right:10px;">
+						<select class="custom-select mr-sm-2" id="university_search">
+							<option selected>University</option>
+						</select>
+					</div>
+					<div class="form-group" style="margin-left:10px;margin-right:10px;">
+						<select class="custom-select mr-sm-2" id="university_search">
+							<option selected>Location</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+		<div class="col">
+			<h2 class="upcoming_events_title" style="color:white;border-left:10px solid #0f2862">Calendar</h2>
+			<div class="underline" style="border:1px solid black;margin-bottom:15px;"></div>
+			<div style="overflow-y:auto;height:40vh; background-color: white;margin-left:10px;margin-right:10px;">				
+			</div>
+		</div>
+		<!--<div class="col">
+				
+			</div>-->
+		</div>
+	</div>
+</container>
+<script src="js/index.js"></script>
+</body>
+<footer style="color:white;">Made by Drew King</footer>
+</html>

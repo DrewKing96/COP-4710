@@ -1,0 +1,11 @@
+super_admin->creates university profile
+			access to create university profile,login,signup
+
+admin->creates events
+		access to create events,dashboard,login,signup
+
+student->search events
+		add events to calendar and upcoming events
+		request to create an RSO
+
+		access to dashboard, RSO request, login-signup

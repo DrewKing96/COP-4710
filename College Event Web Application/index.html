@@ -1,0 +1,431 @@
+<html>
+<header><title>College Events</title></header>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/index.js"></script>
+	<style>
+	.form-control:focus{border-color: #5cb85c;  box-shadow: none; -webkit-box-shadow: none;} 
+	.has-error .form-control:focus{box-shadow: none; -webkit-box-shadow: none;}
+	</style>
+</head>
+<body style="background-color: #ebebeb;">
+<div id='navbar'></div>
+<div id="university_profile_creation" style="display: none;">
+	<div class="university_profile_creation" style="border: 1px solid black; margin-left:15px;margin-right:15px;margin-top:10px;background-color:white;">
+	<div class="university_profile" style="margin-left:10px;margin-top:10px;margin-bottom:10px;width:30rem;">
+		<form method="POST" class="university_profile_form">
+			<h2 class="university_profile_title"><i class="fa fa-university" aria-hidden="true"></i> University Profile Creation</h2>
+			<div class="underline" style="border:1px solid black;width:23rem !important;margin-left:48px !important;"></div>
+		</form>
+	</div>
+	<div class="form-group" style="margin-left:10px;margin-right:10px;">
+		<input type="text" class="form-control" id="university_name" aria-describedby="text" placeholder="Name of the Institution">
+	</div>
+	<div id="university_name_result"></div>
+	<div class="row">
+		<div class="col">
+			<div class="form-group" style="margin-left:10px;margin-right:10px;">
+			<input type="text" class="form-control" id="university_address" aria-describedby="text" placeholder="Street Address">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<div class="form-group" style="margin-left:10px;margin-right:10px;">
+				<input type="text" class="form-control" id="university_city" aria-describedby="text" placeholder="City">
+			</div>
+		</div>
+		<div class="col" style="margin-left:10px;margin-right:10px;">
+			<select class="custom-select mr-sm-2" id="university_state">
+				<option selected>State</option>
+				<option value="AL">AL</option>
+				<option value="AK">AK</option>
+				<option value="AZ">AZ</option>
+				<option value="AR">AR</option>
+				<option value="CA">CA</option>
+				<option value="CO">CO</option>
+				<option value="CT">CT</option>
+				<option value="DE">DE</option>
+				<option value="FL">FL</option>
+				<option value="GA">GA</option>
+				<option value="HI">HI</option>
+				<option value="ID">ID</option>
+				<option value="IL">IL</option>
+				<option value="IN">IN</option>
+				<option value="IA">IA</option>
+				<option value="KS">KS</option>
+				<option value="KY">KY</option>
+				<option value="LA">LA</option>
+				<option value="ME">ME</option>
+				<option value="MD">MD</option>
+				<option value="MA">MA</option>
+				<option value="MI">MI</option>
+				<option value="MN">MN</option>
+				<option value="MS">MS</option>
+				<option value="MO">MO</option>
+				<option value="MT">MT</option>
+				<option value="NE">NE</option>
+				<option value="NV">NV</option>
+				<option value="NH">NH</option>
+				<option value="NJ">NJ</option>
+				<option value="NM">NM</option>
+				<option value="NY">NY</option>
+				<option value="NC">NC</option>
+				<option value="ND">ND</option>
+				<option value="OH">OH</option>
+				<option value="OK">OK</option>
+				<option value="OR">OR</option>
+				<option value="PA">PA</option>
+				<option value="RI">RI</option>
+				<option value="SC">SC</option>
+				<option value="SD">SD</option>
+				<option value="TN">TN</option>
+				<option value="TX">TX</option>
+				<option value="UT">UT</option>
+				<option value="VT">VT</option>
+				<option value="VA">VA</option>
+				<option value="WA">WA</option>
+				<option value="WV">WV</option>
+				<option value="WI">WI</option>
+				<option value="WY">WY</option>
+			</select>
+		</div>
+		<div class="col">
+			<div class="form-group" style="margin-left:10px;margin-right:10px;">
+				<input type="text" class="form-control" id="university_zipcode" aria-describedby="text" placeholder="Zipcode">
+			</div>
+		</div>
+	</div>
+	<div id="university_address_result"></div>
+	<div class="row">
+		<div class="col">
+			<div class="form-group" style="margin-left:10px;margin-right:10px;">
+				<input type="text" class="form-control" id="num_students" aria-desribedby="text" placeholder="Number of Students">
+			</div>
+		</div>
+	</div>
+	<div id="university_numStudents_result"></div>
+	<div class="row">
+		<div class="col">
+			<div class="form-group">
+				<label style="margin-left:10px;" for="university_description">University Description</label>
+				<textarea class="text-area form-control" id="university_description" row="3"></textarea>
+			</div>
+		</div>
+	</div>
+	<div id="university_description_result"></div>
+	<div class="form-group" style="margin-right:10px;margin-left:10px;">
+		<button type="button" class="btn btn-outline-success btn-block" onclick="doUniProfileCreation()">Create</button>
+	</div>
+</div>
+</div>
+<div id="event_creation" style="display:none;">
+	<div class="event_creation" style="border: 1px solid black; margin-left:15px; margin-right:15px;margin-top:10px;background-color:white;">
+	<div class="event" style="margin-left:10px;margin-top:10px;margin-bottom:10px;width:18rem;">
+		<form method="POST" class="event_creation_form">
+			<h2 class="event_title"> <i class="fa fa-globe" aria-hidden="true"></i> Event Creation</h2>
+			<div class="underline" style="border:1px solid black;width:13rem !important; margin-left:35px !important;"></div>
+		</form>
+	</div>
+	<div class="form-group" style="margin-left:10px;margin-right:10px;">
+		<input type="text" class="form-control" id="eventName" aria-describedby="text" placeholder="Event Name">
+	</div>
+	<div id=eventName_Result></div>
+	<div class="form-group" style="margin-left:10px; margin-right:10px;">
+		<select class="custom-select mr-sm-2" id="eventCategory">
+			<option selected>Event Category</option>
+			<option value="Social">Social</option>
+			<option value="Fundraising">Fundraising</option>
+			<option value="Tech Talks">Tech Talks</option>
+		</select>
+	</div>
+	<div id=eventCategory_Result></div>
+	<label style="margin-left:10px;">Date of Event</label>
+	<div class="form-group">
+		<div class="row">
+			<div class="col" style="margin-left:10px;">
+			<select class="custom-select mr-sm-2" id="date">
+				<option selected>Day</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+				<option value="25">25</option>
+				<option value="26">26</option>
+				<option value="27">27</option>
+				<option value="28">28</option>
+				<option value="29">29</option>
+				<option value="30">30</option>
+				<option value="31">31</option>
+			</select>
+			</div>
+			<div class="col">
+			<select class="custom-select mr-sm-2" id="Month">
+				<option selected>Month</option>
+				<option value="January">January</option>
+				<option value="Febuary">Febuary</option>
+				<option value="March">March</option>
+				<option value="April">April</option>
+				<option value="May">May</option>
+				<option value="June">June</option>
+				<option value="July">July</option>
+				<option value="August">August</option>
+				<option value="September">September</option>
+				<option value="October">October</option>
+				<option value="November">November</option>
+				<option value="December">December</option>
+			</select>
+			</div>
+			<div class="col" style="margin-right:10px;">
+			<input type="text" class="form-control" id="Year" aria-describedby="text" placeholder="Year">
+			</div>
+		</div>
+	</div>
+	<div id=eventDate_Result></div>
+	<label style="margin-left:10px;">Time of Event</label>
+	<div class="form-group">
+		<div class="row">
+			<div class="col" style="margin-left:10px;">
+				<select class="custom-select mr-sm-2" id="start_time">
+					<option selected>Start Time</option>
+					<option value="7:00 AM">7:00 AM</option>
+					<option value="8:00 AM">8:00 AM</option>
+					<option value="9:00 AM">9:00 AM</option>
+					<option value="10:00 AM">10:00 AM</option>
+					<option value="11:00 AM">11:00 AM</option>
+					<option value="12:00 PM">12:00 PM</option>
+					<option value="1:00 PM">1:00 PM</option>
+					<option value="2:00 PM">2:00 PM</option>
+					<option value="3:00 PM">3:00 PM</option>
+					<option value="4:00 PM">4:00 PM</option>
+					<option value="5:00 PM">5:00 PM</option>
+					<option value="6:00 PM">6:00 PM</option>
+					<option value="7:00 PM">7:00 PM</option>
+					<option value="8:00 PM">8:00 PM</option>
+					<option value="9:00 PM">9:00 PM</option>
+					<option value="10:00 PM">10:00 PM</option>
+					<option value="11:00 PM">11:00 PM</option>
+					<option value="12:00 AM">12:00 AM</option>
+					<option value="1:00 AM">1:00 AM</option>
+					<option value="2:00 AM">2:00 AM</option>
+					<option value="3:00 AM">3:00 AM</option>
+					<option value="4:00 AM">4:00 AM</option>
+					<option value="5:00 AM">5:00 AM</option>
+					<option value="6:00 AM">6:00 AM</option>
+				</select>
+			</div>
+			<div class="col" style="margin-right:10px;">
+				<select class="custom-select mr-sm-2" id="end_time">
+					<option selected>End Time</option>
+					<option value="7:00 AM">7:00 AM</option>
+					<option value="8:00 AM">8:00 AM</option>
+					<option value="9:00 AM">9:00 AM</option>
+					<option value="10:00 AM">10:00 AM</option>
+					<option value="11:00 AM">11:00 AM</option>
+					<option value="12:00 PM">12:00 PM</option>
+					<option value="1:00 PM">1:00 PM</option>
+					<option value="2:00 PM">2:00 PM</option>
+					<option value="3:00 PM">3:00 PM</option>
+					<option value="4:00 PM">4:00 PM</option>
+					<option value="5:00 PM">5:00 PM</option>
+					<option value="6:00 PM">6:00 PM</option>
+					<option value="7:00 PM">7:00 PM</option>
+					<option value="8:00 PM">8:00 PM</option>
+					<option value="9:00 PM">9:00 PM</option>
+					<option value="10:00 PM">10:00 PM</option>
+					<option value="11:00 PM">11:00 PM</option>
+					<option value="12:00 AM">12:00 AM</option>
+					<option value="1:00 AM">1:00 AM</option>
+					<option value="2:00 AM">2:00 AM</option>
+					<option value="3:00 AM">3:00 AM</option>
+					<option value="4:00 AM">4:00 AM</option>
+					<option value="5:00 AM">5:00 AM</option>
+					<option value="6:00 AM">6:00 AM</option>
+				</select>
+		</div>
+	</div>
+	<div id=eventTime_Result></div>
+	<label style="margin-left:10px;">Contact Information</label>
+	<div class="form-group">
+		<div class="row">
+			<div style="margin-left:10px;" class="col">
+				<input type="tel" class="form-control" id="PhoneNumber" aria-describedby="text" placeholder="Contact Phone Number">
+			</div>
+			<div style="margin-right:10px;" class="col">
+				<input type="text" class="form-control" id="Email" aria-describedby="text" placeholder="Contact Email">
+			</div>
+		</div>
+	</div>
+	<div id=eventContact_Result></div>
+	<div class="form-group" style="margin-right:10px;margin-left:10px;">
+		<button type="button" class="btn btn-outline-success btn-block" onclick="doEventCreation()">Create</button>
+	</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div id="rso" style="display:none;overflow: hidden;">
+<div class="rso_creation" id="rso_creation" style="border: 1px solid black; margin-left:15px;margin-right:15px;margin-top:10px;background-color:white;">
+	<div class="rso_profile" style="margin-left:10px;margin-top:10px;margin-bottom:10px;width:30rem;">
+		<form method="POST" class="rso_profile_form">
+			<h2 class="rso_profile_title"><i class="fa fa-university" aria-hidden="true"></i> RSO Creation</h2>
+			<div class="underline" style="border:1px solid black;width:23rem !important;margin-left:48px !important;"></div>
+		</form>
+	</div>
+	<div class="form-group" style="margin-left:10px;margin-right:10px;">
+		<input type="text" class="form-control" id="rso_name" aria-describedby="text" placeholder="Name of the RSO">
+	</div>
+	<div id="rso_name_result"></div>
+	<div class="row">
+		<div class="col">
+			<div class="form-group" style="margin-left:10px;margin-right:10px;">
+			<input type="text" class="form-control" id="rso_university" aria-describedby="text" placeholder="University Association">
+			</div>
+		</div>
+	</div>
+	<div class="form-group" style="margin-right:10px;margin-left:10px;">
+		<button type="button" class="btn btn-outline-success btn-block" onclick="doRSOCreation()">Create</button>
+	</div>
+</div>
+</div>
+<div id='dashboard' style="display: none;background-color: #0f2862;overflow: hidden;">
+	<div id="welcomeMess"></div>
+	<div class="row">
+		<div class="col">
+			<h2 class="upcoming_events_title" style="color:white;border-left:10px solid #0f2862">Search Results</h2>
+			<div class="underline" style="border:1px solid black;margin-bottom:15px;"></div>
+			<div style="overflow-y:auto;overflow-x:auto;height:75vh;">
+				<div id='card-container'></div>
+			</div>
+		</div>
+		<div class="col">
+				<div class="dashboard_event_search">
+					<div class="search">
+						<form method="POST" class="event_search_form">
+							<h2 class="search_title" style="color:white;">Search Events</h2>
+							<div class="underline" style="border:1px solid black;"></div>
+						</form>
+					</div>
+					<div class="row">
+		<div class="col">
+			<div class="form-group" style="margin-left:10px;margin-right:10px;">
+				<input type="text" class="form-control" id="eventSchool" aria-desribedby="text" placeholder="University">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<div class="form-group" style="margin-left:10px;margin-right:10px;">
+				<input type="text" class="form-control" id="eventLocation" aria-desribedby="text" placeholder="Location">
+			</div>
+		</div>
+	</div>
+	<div id="university_description_result"></div>
+	<div class="form-group" style="margin-right:10px;margin-left:10px;">
+		<button type="button" class="btn btn-outline-success btn-block" onclick="doEventSearch()">Search</button>
+	</div>
+				</div>
+				<div class="dashboard_current_rso">
+					<div class="rso">
+						<form method="POST" class="rso_info">
+							<h2 class="search_title" style="color:white;">Search RSO(s)</h2>
+							<div class="underline" style="border:1px solid black;"></div>
+						</form>
+					</div>
+					<div class="row">
+		<div class="col">
+			<div class="form-group" style="margin-left:10px;margin-right:10px;">
+				<input type="text" class="form-control" id="RSOSchool" aria-desribedby="text" placeholder="University">
+			</div>
+		</div>
+	</div>
+	<div class="form-group" style="margin-right:10px;margin-left:10px;">
+		<button type="button" class="btn btn-outline-success btn-block" onclick="doRSOSearch()">Search</button>
+	</div>
+				</div>
+			</div>
+		</div>
+	<div class="row">
+		<div class="col">
+			<!--<h2 class="upcoming_events_title" style="color:white;border-left:10px solid #0f2862">My Events</h2>
+			<div class="underline" style="border:1px solid black;margin-bottom:15px;"></div>-->
+			<div style="overflow-y:auto;height:95vh;display: none;">
+				<div id='card-container_MyEvents'style="margin-right:10px;"></div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<h2 class="upcoming_events_title" style="color:white;border-left:10px solid #0f2862">Calendar</h2>
+			<div class="underline" style="border:1px solid black;margin-bottom:15px;"></div>
+			<div style="overflow-y:auto;height:40vh; background-color: white;margin-left:10px;margin-right:10px;">				
+			</div>
+		</div>
+		<!--<div class="col">
+				
+			</div>-->
+	</div>
+</div>
+<div id="index_page">
+<br>
+<br>
+<br>
+<br>
+<div class="login_creating" id="login_creating" style="background-color: white;border-top:50px solid #ebebeb;border-bottom:50px solid #ebebeb;border-right:100px solid #ebebeb;border-left:100px solid #ebebeb;margin-left:20px;margin-right:20px;">
+	<div class='login'>
+		<form method="POST" class='login_form'>
+			<h2 class = "Login" style="margin-left:50px;border-top:20px solid white;">Account Login</h2>
+			<!--<div class="underline" style="border: 1px solid black;margin-left:10px;margin-right:10px;"></div>-->
+		</form>
+	</div>
+	<div class="form-group" style="margin-right:50px;margin-left:50px;">
+		<input type="text" class="form-control" id="userName" aria-describedby="text" placeholder="Username">
+	</div>
+	<div class="form-group" style="margin-left:50px;margin-left:50px;">
+		<div id="userNameResult"></div>
+	</div>
+	<div class="form-group" style="margin-right:50px;margin-left:50px;">
+		<input type="password" class="form-control" id="userPWD" aria-describedby="text" placeholder="Password">
+	</div>
+	<div class="form-group" style="margin-right:50px;margin-left:50px;">
+		<div id="pwdResult"></div>
+	</div>
+	<div class="form-group" style="margin-left:50px;margin-right:50px;">
+		<div id="loginresult"></div>
+	</div>
+	<div class="form-group" style="margin-right:50px;margin-left:50px;border-bottom:20px solid white;">
+		<button type="button" class="btn btn-outline-success btn-block" onclick="doLogin()"> Login</button>
+		<div style="text-align:center;margin-top:10px;">
+		<a href="register.html" style="color:grey;text-decoration: none;">Create Your Account <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+		</div>
+		<!--<button type="button" class="btn btn-outline-success btn-block" onclick="switchToRegister()">Register</button>-->
+	</div>
+</div>
+</div>
+</html>
